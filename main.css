@@ -1,0 +1,10 @@
+/* Set the entire body to have a background */
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light grey background */
+    background-image: url('background2.jpg'); /* Optional background image */
+    background-size: cover; /* Make the background image cover the whole page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure no image repetition */
+}
