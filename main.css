@@ -1,10 +1,17 @@
 /* Set the entire body to have a background */
 body {
     margin: 0;
-    height: 100vh;
-    background-color: #f0f0f0; /* Light grey background */
-    background-image: url('background2.jpg'); /* Optional background image */
+    height: 100px;
+    background-color: #e4f1ee; /* Light grey background */
     background-size: cover; /* Make the background image cover the whole page */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Ensure no image repetition */
+}
+
+h1 {
+    background-size: cover;
+    height: 500px;
+    
+    background-image: url('background2.jpg');
+    
 }
