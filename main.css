@@ -79,3 +79,12 @@ nav ul li {
 nav ul li {
     color: grey;
 }
+
+header {
+    background-image: url(background2.jpg);
+ }
+
+nav ul li a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
