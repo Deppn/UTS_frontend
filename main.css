@@ -90,3 +90,12 @@ nav ul li a{
     height: auto; /* Agar proporsi gambar tetap terjaga */
     border-radius: 10px; /* Opsional: memberi efek sudut melengkung */
 }
+
+header {
+    background-image: url(background2.jpg);
+ }
+
+nav ul li a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
