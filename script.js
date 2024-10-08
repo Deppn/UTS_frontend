@@ -89,6 +89,34 @@ function galleryAnimation(triggerSelector, boxSelectors) {
     });
 }
 
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".card");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            // Menghapus kelas aktif dari semua tombol
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            // Menambahkan kelas aktif pada tombol yang dipilih
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+            cards.forEach(card => {
+                // Menampilkan semua kartu jika filter adalah 'all'
+                if (filterValue === "all" || card.getAttribute("data-category") === filterValue) {
+                    card.style.display = "block"; // Tampilkan kartu
+                } else {
+                    card.style.display = "none"; // Sembunyikan kartu
+                }
+            });
+        });
+    });
+});
+
+
+
+
 
 
 

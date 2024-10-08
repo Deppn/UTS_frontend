@@ -10,7 +10,6 @@
     text-decoration: none;
 }
 
-
 :root {
     --dark-blue: #00008B;
     --blue-color: #2234A8;
@@ -40,7 +39,7 @@ section {
 
 .label {
     font-size: 1.1rem;
-    color:  #666;
+    color: #666;
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -51,7 +50,7 @@ section {
 }
 
 section.hjp {
-    padding:0;
+    padding: 0;
     width: 100%;
     height: 100vh;
 }
@@ -59,18 +58,31 @@ section.hjp {
 .hjp .hjp-box {
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../images/jepang.jpg");
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/jepang.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: .5rem;
+    padding: 2rem; /* Adjust padding as needed */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center vertically */
+    color: white; /* Change text color to contrast against the background */
+    text-align: left; /* Align text to the left */
+}
 
+.hjp .hjp-box h1 {
+    font-size: 3rem; /* Adjust font size for the main heading */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.hjp .hjp-box p {
+    font-size: 1.25rem; /* Adjust font size for paragraph text */
 }
 
 .hjp .hjp-box nav {
-    width: calc(100% - 2rem); 
+    width: calc(100% - 2rem);
     height: 65px;
-    background: linear-gradient(rgb(255,255,255,.2),rgb(255,255,255,.2));
+    background: linear-gradient(rgb(255, 255, 255, .2), rgb(255, 255, 255, .2));
     backdrop-filter: blur(1px);
     border-radius: .7rem;
     display: flex;
@@ -80,8 +92,8 @@ section.hjp {
     z-index: 10;
     position: fixed;
     top: 1rem;
-    left: 1rem; 
-    right: 1rem; 
+    left: 1rem;
+    right: 1rem;
 }
 
 .hjp .hjp-box nav .logo {
@@ -102,7 +114,7 @@ section.hjp {
 }
 
 .hjp .hjp-box nav .logo h3 {
-    color: #000; 
+    color: #000;
     font-weight: 700;
 }
 
@@ -117,12 +129,12 @@ section.hjp {
 }
 
 .hjp .hjp-box nav .menu ul li a {
-    color: #000; /* Ubah warna teks menu menjadi hitam */
+    color: #000; /* Change text color to black */
     font-weight: 400;
 }
 
 .hjp .hjp-box nav .menu ul li a:hover {
-    color: grey; /* Ubah warna teks menu saat hover menjadi hitam dengan transparansi */
+    color: grey; /* Change hover color */
 }
 
 .hjp .hjp-box .content {
@@ -134,8 +146,6 @@ section.hjp {
     flex-direction: column;
     transform: translate(0, -65px);
 }
-
-
 
 .hjp .hjp-box .content h1 {
     font-size: 4rem;
@@ -168,7 +178,7 @@ section.hjp {
 }
 
 .hjp .hjp-box .content .search i {
-    color: rgba(0,0,0,.5);
+    color: rgba(0, 0, 0, .5);
     margin: 0 .6rem;
 }
 
@@ -197,7 +207,9 @@ section.hjp {
     background: grey;
 }
 
-.hjp .hjp-box .content h1, .hjp .hjp-box .content p, .hjp .hjp-box .content .search {
+.hjp .hjp-box .content h1,
+.hjp .hjp-box .content p,
+.hjp .hjp-box .content .search {
     transform: translate(0, 100px);
-    opacity: 0;
+    opacity: 100;
 }
