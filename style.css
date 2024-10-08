@@ -536,14 +536,16 @@ section.home {
 
 /* Footer Styles */
 footer {
-    background-color: var(--green-color); /* Use your defined green color */
+    margin-top: 2rem;
+    background-image: radial-gradient(#32454b,#334d55,#254149);
+    background-color: #32454b; /* Use your defined green color */
     color: var(--white-color); /* White text color */
     padding: 2rem 0; /* Vertical padding */
     text-align: center; /* Center align text */
 }
 
 footer .footer-container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto; /* Center the container */
 }
 
@@ -558,7 +560,7 @@ footer .footer-container .social-links {
 }
 
 footer .footer-container .social-links a {
-    color: var(--white-color); /* White color for links */
+    color: white; /* White color for links */
     margin: 0 1rem; /* Horizontal margin for spacing */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Smooth color transition */
