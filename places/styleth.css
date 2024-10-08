@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+
+:root {
+    --dark-blue: #00008B;
+    --blue-color: #2234A8;
+    --white-color: #fff;
+}
+
+::selection {
+    background: var(--blue-color);
+    color: var(--white-color);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 0 8rem;
+    width: 100%;
+}
+
+.label {
+    font-size: 1.1rem;
+    color:  #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.heading {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+section.hth {
+    padding:0;
+    width: 100%;
+    height: 100vh;
+}
+
+.hth .hth-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../images/thailand.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: .5rem;
+
+}
+
+.hth .hth-box nav {
+    width: calc(100% - 2rem); 
+    height: 65px;
+    background: linear-gradient(rgb(255,255,255,.2),rgb(255,255,255,.2));
+    backdrop-filter: blur(1px);
+    border-radius: .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    z-index: 10;
+    position: fixed;
+    top: 1rem;
+    left: 1rem; 
+    right: 1rem; 
+}
+
+.hth .hth-box nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hth .hth-box nav .logo .bar {
+    font-size: 1.35rem;
+    color: var(--white-color);
+    cursor: pointer;
+    display: none;
+}
+
+.hth .hth-box nav .logo .bar:hover {
+    color: var(--blue-color);
+}
+
+.hth .hth-box nav .logo h3 {
+    color: #000; 
+    font-weight: 700;
+}
+
+.hth .hth-box nav .menu .close {
+    display: none;
+}
+
+.hth .hth-box nav .menu ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.hth .hth-box nav .menu ul li a {
+    color: #000; /* Ubah warna teks menu menjadi hitam */
+    font-weight: 400;
+}
+
+.hth .hth-box nav .menu ul li a:hover {
+    color: grey; /* Ubah warna teks menu saat hover menjadi hitam dengan transparansi */
+}
+
+.hth .hth-box .content {
+    width: 100%;
+    height: calc(100% - 65px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(0, -65px);
+}
+
+
+
+.hth .hth-box .content h1 {
+    font-size: 4rem;
+    max-width: 50rem;
+    color: var(--white-color);
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hth .hth-box .content p {
+    color: #eee;
+    font-weight: 300;
+    max-width: 40rem;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hth .hth-box .content .search {
+    width: 100%;
+    max-width: 38rem;
+    height: 45px;
+    background: var(--white-color);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+}
+
+.hth .hth-box .content .search i {
+    color: rgba(0,0,0,.5);
+    margin: 0 .6rem;
+}
+
+.hth .hth-box .content .search input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 400;
+}
+
+.hth .hth-box .content .search button {
+    height: 100%;
+    padding: 0 1rem;
+    border-radius: inherit;
+    background: #bbbbbb;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.hth .hth-box .content .search button:hover {
+    background: grey;
+}
+
+.hth .hth-box .content h1, .hth .hth-box .content p, .hth .hth-box .content .search {
+    transform: translate(0, 100px);
+    opacity: 0;
+}
