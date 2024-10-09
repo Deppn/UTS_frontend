@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+
+:root {
+    --dark-green: #00008B;
+    --green-color: #2234A8;
+    --white-color: #fff;
+}
+
+::selection {
+    background: var(--green-color);
+    color: var(--white-color);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 0 8rem;
+    width: 100%;
+}
+
+.label {
+    font-size: 1.1rem;
+    color:  #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.heading {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
+}
+
+section.home {
+    padding:0;
+    width: 100%;
+    height: 100vh;
+}
+
+.home .home-box {
+    width: 100%;
+    height: 100%;
+    background: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: .5rem;
+}
+
+.home .home-box nav {
+    width: calc(100% - 2rem); 
+    height: 65px;
+    background: linear-gradient(rgb(255,255,255,.2),rgb(255,255,255,.2));
+    backdrop-filter: blur(1px);
+    border-radius: .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    z-index: 10;
+    position: fixed;
+    top: 1rem;
+    left: 1rem; 
+    right: 1rem; 
+}
+
+.home .home-box nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home .home-box nav .logo .bar {
+    font-size: 1.35rem;
+    color: var(--green-color);
+    cursor: pointer;
+    display: none;
+}
+
+.home .home-box nav .logo .bar:hover {
+    color: var(--dark-green);
+}
+
+.home .home-box nav .logo h3 {
+    color: #000; 
+    font-weight: 700;
+}
+
+.home .home-box nav .menu .close {
+    display: none;
+}
+
+.home .home-box nav .menu ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.home .home-box nav .menu ul li a {
+    color: #000; /* Ubah warna teks menu menjadi hitam */
+    font-weight: 600;
+}
+
+.home .home-box nav .menu ul li a:hover {
+    color: rgb(0, 0, 0, 0.7); /* Ubah warna teks menu saat hover menjadi hitam dengan transparansi */
+}
+
+/* media section starts here  */
+@media (max-width: 1020px) {
+    html {
+        font-size: 85%;
+    }
+
+    section {
+        padding: 0 2rem;
+    }
+
+    footer .footer {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 910px) {
+
+    .home .home-box nav {
+        padding: 0 1rem;
+    }
+
+    .home .home-box nav .menu ul {
+        gap: 2rem;
+    }
+
+    .destinations .container .container-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .heading {
+        font-size: 2rem;
+    }
+    .home .home-box nav .menu {
+        display: none;
+    }
+
+    .home .home-box nav .logo .bar {
+        display: block;
+    }
+
+    .home .home-box nav .menu.active {
+        display: block;
+        position: absolute;
+        left: -1.5rem;
+        top: -1.5rem;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(0 0 0/90%);
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+    }
+
+    .home .home-box nav .menu .close {
+        display: block;
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        cursor: pointer;
+        color: var(--white-color);
+        font-size: 2rem;
+    }
+
+    .home .home-box nav .menu .close:hover {
+        color: rgb(255 255 255/40%);
+    }
+
+    .home .home-box nav .menu ul {
+        flex-direction: column;
+        font-size: 1.3rem;
+        gap: 1rem;
+    }
+
+    .home .home-box nav .menu ul li a {
+        color: var(--white-color); 
+        font-weight: 400; 
+    }
+
+    .home .home-box nav .menu ul li a:hover {
+        color: rgb(255, 255, 255, 0.7); 
+    }
+
+    .home .home-box .content {
+        padding: 2rem;
+    }
+
+    .destinations .container .container-box .content {
+        font-size: .8rem;
+    }
+
+
+}
+
+@media (max-width: 607px) {
+    .home .home-box .content h1 {
+        font-size: 2rem;
+    }
+
+    .home .home-box .content p {
+        font-size: .8rem;
+    }
+}
+
+
+.filter-options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.learn-more {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.learn-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.learn-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Desain Responsif */
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 2rem;
+    background-image: radial-gradient(#32454b,#334d55,#254149);
+    background-color: #32454b; /* Use your defined green color */
+    color: var(--white-color); /* White text color */
+    padding: 2rem 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+}
+
+footer .footer-container {
+    width: 90%;
+    margin: 0 auto; /* Center the container */
+}
+
+footer .footer-container .footer-logo {
+    font-size: 1.5rem; /* Logo size */
+    font-weight: 600; /* Bold font */
+    margin-bottom: 1rem; /* Spacing below the logo */
+}
+
+footer .footer-container .social-links {
+    margin: 1rem 0; /* Margin above and below social links */
+}
+
+footer .footer-container .social-links a {
+    color: white; /* White color for links */
+    margin: 0 1rem; /* Horizontal margin for spacing */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+footer .footer-container .social-links a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent on hover */
+}
+
+footer .footer-container .footer-info {
+    margin-top: 1rem; /* Space above footer info */
+    font-size: 0.9rem; /* Smaller text size */
+}
+
+footer .footer-container .footer-info a {
+    color: rgba(255, 255, 255, 0.7); /* Lighter color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+footer .footer-container .footer-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Light background color */
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between sections */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.footer-section {
+    flex: 1; /* Equal space for each section */
+    padding: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.footer-bottom {
+    text-align: center; /* Center text in the bottom section */
+    margin-top: 10px;
+    font-size: 14px; /* Font size for bottom text */
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    footer .footer-container {
+        width: 90%; /* Reduce width for smaller screens */
+    }
+
+    footer .footer-container .footer-logo {
+        font-size: 1.2rem; /* Adjust logo size */
+    }
+
+    footer .footer-container .social-links a {
+        margin: 0 0.5rem; /* Reduce margin for smaller screens */
+    }
+}
