@@ -48,7 +48,6 @@ section {
 .heading {
     font-size: 3rem;
     margin-top: 1rem;
-    margin-left: 5rem;
 }
 
 section.home {
@@ -92,13 +91,13 @@ section.home {
 
 .home .home-box nav .logo .bar {
     font-size: 1.35rem;
-    color: var(--green-color);
+    color: var(--white-color);
     cursor: pointer;
     display: none;
 }
 
 .home .home-box nav .logo .bar:hover {
-    color: var(--dark-green);
+    color: var(--green-color);
 }
 
 .home .home-box nav .logo h3 {
@@ -118,7 +117,7 @@ section.home {
 
 .home .home-box nav .menu ul li a {
     color: #000; /* Ubah warna teks menu menjadi hitam */
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .home .home-box nav .menu ul li a:hover {
@@ -254,12 +253,11 @@ section.home {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Atur jarak antar elemen */
-    gap: 1rem; /* Jarak antar elemen */
+    gap: 1rem;
 }
 
 .gallery .box {
-    height: 15rem;
+    height: 23rem;
     flex-grow: 1;
     overflow: hidden;
     border-radius: .8rem;
@@ -298,83 +296,6 @@ section.home {
     opacity: 0;
 }
 /* destination section ends here  */
-
-/* Footer Start here */
-footer {
-    margin-top: 2rem;
-    background-image: radial-gradient(#32454b,#334d55,#254149);
-    background-color: #32454b; /* Use your defined green color */
-    color: var(--white-color); /* White text color */
-    padding: 2rem 0; /* Vertical padding */
-    text-align: center; /* Center align text */
-}
-
-footer .footer-container {
-    width: 90%;
-    margin: 0 auto; /* Center the container */
-}
-
-footer .footer-container .footer-logo {
-    font-size: 1.5rem; /* Logo size */
-    font-weight: 600; /* Bold font */
-    margin-bottom: 1rem; /* Spacing below the logo */
-}
-
-footer .footer-container .social-links {
-    margin: 1rem 0; /* Margin above and below social links */
-}
-
-footer .footer-container .social-links a {
-    color: white; /* White color for links */
-    margin: 0 1rem; /* Horizontal margin for spacing */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-footer .footer-container .social-links a:hover {
-    color: rgba(255, 255, 255, 0.7); /* Slightly transparent on hover */
-}
-
-footer .footer-container .footer-info {
-    margin-top: 1rem; /* Space above footer info */
-    font-size: 0.9rem; /* Smaller text size */
-}
-
-footer .footer-container .footer-info a {
-    color: rgba(255, 255, 255, 0.7); /* Lighter color for links */
-    text-decoration: none; /* Remove underline */
-}
-
-footer .footer-container .footer-info a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-.footer-container {
-    display: flex;
-    flex-direction: column; /* Light background color */
-    padding: 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between; /* Distribute space evenly between sections */
-    align-items: flex-start; /* Align items at the top */
-}
-
-.footer-section {
-    flex: 1; /* Equal space for each section */
-    padding: 10px;
-}
-
-.footer-section h3 {
-    margin-bottom: 10px; /* Space below heading */
-}
-
-.footer-bottom {
-    text-align: center; /* Center text in the bottom section */
-    margin-top: 10px;
-    font-size: 14px; /* Font size for bottom text */
-}
-/* footer section end here */
 
 /* media section starts here  */
 @media (max-width: 1020px) {
@@ -473,6 +394,225 @@ footer .footer-container .footer-info a:hover {
     .destinations .container .container-box .content {
         font-size: .8rem;
     }
+
+
+}
+
+@media (max-width: 607px) {
+    .home .home-box .content h1 {
+        font-size: 2rem;
+    }
+
+    .home .home-box .content p {
+        font-size: .8rem;
+    }
+}
+/* Gaya Bagian Destinasi */
+
+.destinations {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.destinations .label {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.destinations .heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.destinations .content {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+}
+
+.destinations .content a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.filter-options {
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: color rgb(255, 255, 255, 0.7);;
+}
+
+.filter-btn {
+    background-color: rgb(255, 255, 255, 0.7);
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.learn-more {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.learn-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.learn-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Desain Responsif */
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* media section starts here  */
+
+/* Footer Styles */
+footer {
+    margin-top: 2rem;
+    background-image: radial-gradient(#32454b,#334d55,#254149);
+    background-color: #32454b; /* Use your defined green color */
+    color: var(--white-color); /* White text color */
+    padding: 2rem 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+}
+
+footer .footer-container {
+    width: 90%;
+    margin: 0 auto; /* Center the container */
+}
+
+footer .footer-container .footer-logo {
+    font-size: 1.5rem; /* Logo size */
+    font-weight: 600; /* Bold font */
+    margin-bottom: 1rem; /* Spacing below the logo */
+}
+
+footer .footer-container .social-links {
+    margin: 1rem 0; /* Margin above and below social links */
+}
+
+footer .footer-container .social-links a {
+    color: white; /* White color for links */
+    margin: 0 1rem; /* Horizontal margin for spacing */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+footer .footer-container .social-links a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent on hover */
+}
+
+footer .footer-container .footer-info {
+    margin-top: 1rem; /* Space above footer info */
+    font-size: 0.9rem; /* Smaller text size */
+}
+
+footer .footer-container .footer-info a {
+    color: rgba(255, 255, 255, 0.7); /* Lighter color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+footer .footer-container .footer-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Light background color */
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between sections */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.footer-section {
+    flex: 1; /* Equal space for each section */
+    padding: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.footer-bottom {
+    text-align: center; /* Center text in the bottom section */
+    margin-top: 10px;
+    font-size: 14px; /* Font size for bottom text */
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
     footer .footer-container {
         width: 90%; /* Reduce width for smaller screens */
     }
@@ -485,13 +625,54 @@ footer .footer-container .footer-info a:hover {
         margin: 0 0.5rem; /* Reduce margin for smaller screens */
     }
 }
-
-@media (max-width: 607px) {
-    .home .home-box .content h1 {
-        font-size: 2rem;
-    }
-
-    .home .home-box .content p {
-        font-size: .8rem;
-    }
+.cities {
+    padding: 2rem 0; /* Vertical padding */
+    background-color: #f9f9f9; /* Light background color for contrast */
 }
+
+.cities .label {
+    text-align: center;
+    font-size: 1.5rem; /* Label size */
+    margin-bottom: 1rem; /* Spacing below label */
+}
+
+.cities .container {
+    width: 80%;
+    margin: 0 auto; /* Center the container */
+}
+
+.cities .gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center; /* Center cards */
+    gap: 1rem; /* Space between cards */
+}
+
+.cities .card {
+    background-color: #fff; /* White card background */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing content */
+    width: calc(33.33% - 1rem); /* Three cards in a row with gap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.cities .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.cities .card img {
+    width: 100%; /* Image takes full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.cities .card-content {
+    padding: 1rem; /* Padding inside the card */
+}
+
+.cities .learn-more {
+    text-decoration: none; /* Remove underline */
+    color: #007BFF; /* Link color */
+    font-weight: bold; /* Bold font for emphasis */
+}
+

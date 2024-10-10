@@ -89,6 +89,27 @@ function galleryAnimation(triggerSelector, boxSelectors) {
     });
 }
 
+window.onload = function() {
+    // Get the URL parameter from the search
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('country');
+    
+    if (searchQuery) {
+        const countryCards = document.querySelectorAll('.card'); // Select all cards
+        
+        countryCards.forEach(card => {
+            const countryName = card.querySelector('h3').textContent.trim().toLowerCase();
+            
+            // If the country name matches the search query, display it; otherwise, hide the card
+            if (countryName.includes(searchQuery.toLowerCase())) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+};
+
 // script.js
 document.addEventListener("DOMContentLoaded", function() {
     const filterButtons = document.querySelectorAll(".filter-btn");

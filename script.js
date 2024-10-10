@@ -70,6 +70,14 @@ function swipeAnimation(triggerSelector, boxSelectors) {
     });
 }
 
+function searchCountry() {
+    const searchQuery = document.getElementById('searchInput').value.trim();
+    if (searchQuery) {
+        window.location.href = `exploremore/index.html?country=${encodeURIComponent(searchQuery)}`;
+    }
+}
+
+
 function galleryAnimation(triggerSelector, boxSelectors) {
     const timeline = gsap.timeline({
         scrollTrigger: {
