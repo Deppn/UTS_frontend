@@ -6,6 +6,7 @@
     <title>AsiaTour.</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     <!-- home section mulai disini  -->
@@ -26,7 +27,7 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#destinations">destinations</a></li>
-                        <li><a href="#tips">TravelTips</a></li>
+                        <li><a href="#tips">Remainder</a></li>
                     </ul>
                 </div>
             </nav>
@@ -36,8 +37,10 @@
                 <p>Find impressive vacation spots throughout Asia and make an unforgettable vacation trip</p>
 
                 <div class="search">
+                    <i class="fa fa-search"></i>
                     <input type="text" id="searchInput" placeholder="Search for a country..." />
                     <button onclick="searchCountry()">Search</button>
+
                 </div>
             </div>
         </div>
@@ -58,31 +61,31 @@
             </div>
             <div class="gallery">
                 <div class="box box1">
-                    <a href="./places/indonesia.html"><img src="./images/home-background.jpeg" alt=""></a>
+                    <a href="./negara/indonesia/index.html"><img src="./images/home-background.jpeg" alt=""></a>
                     <div class="text">
                         <a href="#"><h2>Indonesia</h2></a>
                     </div>
                 </div>
                 <div class="box box2">
-                    <a href="./places/singapore.html"><img src="./images/singapore.jpg" alt=""></a>
+                    <a href="./negara/singapura/index.html"><img src="./images/singapore.jpg" alt=""></a>
                     <div class="text">
                         <a href="#"><h2>Singapore</h2></a>  
                     </div>
                 </div>
                 <div class="box box3">
-                    <a href="./places/thailand.html"><img src="./images/thailand.jpg" alt=""> </a>
+                    <a href="./negara/Thailand/index.html"><img src="./images/thailand.jpg" alt=""> </a>
                     <div class="text">
                         <a href=""><h2>Thailand</h2></a>
                     </div>
                 </div>
                 <div class="box box4">
-                    <a href="./places/malaysia.html"><img src="./images/malaysia.jpg" alt=""></a>
+                    <a href="./negara/malaysia/index.html"><img src="./images/malaysia.jpg" alt=""></a>
                     <div class="text">
                         <a href=""><h2>Malaysia</h2></a>
                     </div>
                 </div>
                 <div class="box box5">
-                    <a href="./places/japan.html"><img src="./images/jepang.jpg" alt=""></a>
+                    <a href="./negara/jepang/index.html"><img src="./images/jepang.jpg" alt=""></a>
                     <div class="text">
                         <a href=""><h2>Japan</h2></a>
                     </div>
@@ -93,11 +96,48 @@
     <!-- destinatons section berkahir disini -->
      
     <!--traveltips section start here-->
-    <section id="tips" class="tips">
-        <h4 class="label">TravelTips</h4>
-        <div class="container">
-            <div class="container-box">
-            </section>
+        <section id="tips" class="tips">
+            <h4 class="label">Travelremainder</h4>
+            <div class="container">
+                <div class="container-box">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/peta.jpg" alt="Tip 1 Image" />
+                                <p>Tip 1: Selalu bawa peta lokal.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/first aid kit.jpg" alt="Tip 2 Image" />
+                                <p>Tip 2: membawa alat kesehatan.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/cuaca.jpg" alt="Tip 3 Image" />
+                                <p>Tip 3: Cek cuaca sebelum berangkat.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/peta.jpg" alt="Tip 1 Image" />
+                                <p>Tip 1: Selalu bawa peta lokal.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/first aid kit.jpg" alt="Tip 2 Image" />
+                                <p>Tip 2: membawa alat kesehatan</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/cuaca.jpg" alt="Tip 3 Image" />
+                                <p>Tip 3: Cek cuaca sebelum berangkat.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/cuaca.jpg" alt="Tip 3 Image" />
+                                <p>Tip 3: Cek cuaca sebelum berangkat.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <footer>
     <div class="footer-container">
@@ -144,6 +184,7 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
 </body>
 </html>

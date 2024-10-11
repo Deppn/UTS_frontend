@@ -97,8 +97,18 @@ function galleryAnimation(triggerSelector, boxSelectors) {
     });
 }
 
-// script.js
+
 document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+    });
+
     const filterButtons = document.querySelectorAll(".filter-btn");
     const cards = document.querySelectorAll(".card");
 

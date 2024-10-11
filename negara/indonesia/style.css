@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+
+:root {
+    --dark-green: #00008B;
+    --green-color: #2234A8;
+    --white-color: #fff;
+}
+
+::selection {
+    background: var(--green-color);
+    color: var(--white-color);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 0 8rem;
+    width: 100%;
+}
+
+.label {
+    font-size: 1.1rem;
+    color:  #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.heading {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+section.home {
+    padding:0;
+    width: 100%;
+    height: 100vh;
+}
+
+.home .home-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../images/bg\ indonesia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: .5rem;
+}
+
+.home .home-box nav {
+    width: calc(100% - 2rem); 
+    height: 65px;
+    background: linear-gradient(rgb(255,255,255,.2),rgb(255,255,255,.2));
+    backdrop-filter: blur(1px);
+    border-radius: .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    z-index: 10;
+    position: fixed;
+    top: 1rem;
+    left: 1rem; 
+    right: 1rem; 
+}
+
+.home .home-box nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home .home-box nav .logo .bar {
+    font-size: 1.35rem;
+    color: var(--white-color);
+    cursor: pointer;
+    display: none;
+}
+
+.home .home-box nav .logo .bar:hover {
+    color: var(--green-color);
+}
+
+.home .home-box nav .logo h3 {
+    color: #000; 
+    font-weight: 700;
+}
+
+.home .home-box nav .menu .close {
+    display: none;
+}
+
+.home .home-box nav .menu ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.home .home-box nav .menu ul li a {
+    color: #000; /* Ubah warna teks menu menjadi hitam */
+    font-weight: 600;
+}
+
+.home .home-box nav .menu ul li a:hover {
+    color: rgb(0, 0, 0, 0.7); /* Ubah warna teks menu saat hover menjadi hitam dengan transparansi */
+}
+
+.home .home-box .content {
+    width: 100%;
+    height: calc(100% - 65px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(0, -65px);
+}
+
+
+
+.home .home-box .content h1 {
+    font-size: 4rem;
+    max-width: 50rem;
+    color: var(--white-color);
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.home .home-box .content p {
+    color: #eee;
+    font-weight: 300;
+    max-width: 40rem;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home .home-box .content .search {
+    width: 100%;
+    max-width: 38rem;
+    height: 45px;
+    background: var(--white-color);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+}
+
+.home .home-box .content .search i {
+    color: rgba(0,0,0,.5);
+    margin: 0 .6rem;
+}
+
+.home .home-box .content .search input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 400;
+}
+
+.home .home-box .content .search button {
+    height: 100%;
+    padding: 0 1rem;
+    border-radius: inherit;
+    background: var(--green-color);
+    border: none;
+    outline: none;
+    color: var(--white-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.home .home-box .content .search button:hover {
+    background: var(--dark-green);
+}
+
+.home .home-box .content h1, .home .home-box .content p, .home .home-box .content .search {
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+/* media section starts here  */
+@media (max-width: 1020px) {
+    html {
+        font-size: 85%;
+    }
+
+    section {
+        padding: 0 2rem;
+    }
+
+    footer .footer {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 910px) {
+
+    .home .home-box nav {
+        padding: 0 1rem;
+    }
+
+    .home .home-box nav .menu ul {
+        gap: 2rem;
+    }
+
+    .destinations .container .container-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .heading {
+        font-size: 2rem;
+    }
+    .home .home-box nav .menu {
+        display: none;
+    }
+
+    .home .home-box nav .logo .bar {
+        display: block;
+    }
+
+    .home .home-box nav .menu.active {
+        display: block;
+        position: absolute;
+        left: -1.5rem;
+        top: -1.5rem;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(0 0 0/90%);
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+    }
+
+    .home .home-box nav .menu .close {
+        display: block;
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        cursor: pointer;
+        color: var(--white-color);
+        font-size: 2rem;
+    }
+
+    .home .home-box nav .menu .close:hover {
+        color: rgb(255 255 255/40%);
+    }
+
+    .home .home-box nav .menu ul {
+        flex-direction: column;
+        font-size: 1.3rem;
+        gap: 1rem;
+    }
+
+    .home .home-box nav .menu ul li a {
+        color: var(--white-color); 
+        font-weight: 400; 
+    }
+
+    .home .home-box nav .menu ul li a:hover {
+        color: rgb(255, 255, 255, 0.7); 
+    }
+
+    .home .home-box .content {
+        padding: 2rem;
+    }
+
+    .destinations .container .container-box .content {
+        font-size: .8rem;
+    }
+
+
+}
+
+@media (max-width: 607px) {
+    .home .home-box .content h1 {
+        font-size: 2rem;
+    }
+
+    .home .home-box .content p {
+        font-size: .8rem;
+    }
+}
+/* Gaya Bagian Destinasi */
+
+/* Desain Responsif */
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* media section starts here  */
+
+/* Footer Styles */
+footer {
+    margin-top: 2rem;
+    background-image: radial-gradient(#32454b,#334d55,#254149);
+    background-color: #32454b; /* Use your defined green color */
+    color: var(--white-color); /* White text color */
+    padding: 2rem 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+}
+
+footer .footer-container {
+    width: 90%;
+    margin: 0 auto; /* Center the container */
+}
+
+footer .footer-container .footer-logo {
+    font-size: 1.5rem; /* Logo size */
+    font-weight: 600; /* Bold font */
+    margin-bottom: 1rem; /* Spacing below the logo */
+}
+
+footer .footer-container .social-links {
+    margin: 1rem 0; /* Margin above and below social links */
+}
+
+footer .footer-container .social-links a {
+    color: white; /* White color for links */
+    margin: 0 1rem; /* Horizontal margin for spacing */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+footer .footer-container .social-links a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent on hover */
+}
+
+footer .footer-container .footer-info {
+    margin-top: 1rem; /* Space above footer info */
+    font-size: 0.9rem; /* Smaller text size */
+}
+
+footer .footer-container .footer-info a {
+    color: rgba(255, 255, 255, 0.7); /* Lighter color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+footer .footer-container .footer-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Light background color */
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between sections */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.footer-section {
+    flex: 1; /* Equal space for each section */
+    padding: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.footer-bottom {
+    text-align: center; /* Center text in the bottom section */
+    margin-top: 10px;
+    font-size: 14px; /* Font size for bottom text */
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    footer .footer-container {
+        width: 90%; /* Reduce width for smaller screens */
+    }
+
+    footer .footer-container .footer-logo {
+        font-size: 1.2rem; /* Adjust logo size */
+    }
+
+    footer .footer-container .social-links a {
+        margin: 0 0.5rem; /* Reduce margin for smaller screens */
+    }
+}
+
+.post{
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.post-box{
+    background: var(--bg-color);
+    box-shadow: 0 4px 14px hsl(35deg 25% 15% / 10%);
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+.post-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+.category{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--second-color);
+}
+
+.post-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-date{
+    display: flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+.post-description{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
