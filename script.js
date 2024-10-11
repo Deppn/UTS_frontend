@@ -1,26 +1,26 @@
 const bars = document.querySelector(".bar"),
-close = document.querySelector(".close"),
-menu = document.querySelector(".menu");
+      close = document.querySelector(".close"),
+      menu = document.querySelector(".menu");
 
 bars.addEventListener("click", () => {
     menu.classList.add("active");
-    gsap.from(".menu", {
+    gsap.from(menu, {
         opacity: 0,
-        duration: .3
-    })
-
+        duration: 0.3
+    });
     gsap.from(".menu ul", {
         opacity: 0,
-        x: -300
-    })
+        x: -300,
+        duration: 0.3
+    });
 });
 
 close.addEventListener("click", () => {
-    menu.classList.remove("active")
+    menu.classList.remove("active");
 });
 
-function animateContent(selector) {
-    selector.forEach((selector) => {
+function animateContent(selectors) {
+    selectors.forEach(selector => {
         gsap.to(selector, {
             y: 30,
             duration: 0.1,
@@ -32,7 +32,7 @@ function animateContent(selector) {
     });
 }
 
-function scrollTirggerAnimation(triggerSelector, boxSelectors) {
+function scrollTriggerAnimation(triggerSelector, boxSelectors) {
     const timeline = gsap.timeline({
         scrollTrigger: {
             trigger: triggerSelector,
@@ -42,13 +42,13 @@ function scrollTirggerAnimation(triggerSelector, boxSelectors) {
         },
     });
 
-    boxSelectors.forEach((boxSelector) => {
+    boxSelectors.forEach(boxSelector => {
         timeline.to(boxSelector, {
             y: 0,
             duration: 1,
             opacity: 1,
         });
-    })
+    });
 }
 
 function swipeAnimation(triggerSelector, boxSelectors) {
@@ -61,11 +61,11 @@ function swipeAnimation(triggerSelector, boxSelectors) {
         },
     });
 
-    boxSelectors.forEach((boxSelector) => {
+    boxSelectors.forEach(boxSelector => {
         timeline.to(boxSelector, {
             x: 0,
             duration: 1,
-            opacity:1,
+            opacity: 1,
         });
     });
 }
@@ -77,7 +77,6 @@ function searchCountry() {
     }
 }
 
-
 function galleryAnimation(triggerSelector, boxSelectors) {
     const timeline = gsap.timeline({
         scrollTrigger: {
@@ -88,7 +87,7 @@ function galleryAnimation(triggerSelector, boxSelectors) {
         },
     });
 
-    boxSelectors.forEach((boxSelector) => {
+    boxSelectors.forEach(boxSelector => {
         timeline.to(boxSelector, {
             y: 0,
             opacity: 1,
@@ -96,7 +95,6 @@ function galleryAnimation(triggerSelector, boxSelectors) {
         });
     });
 }
-
 
 document.addEventListener("DOMContentLoaded", function() {
     var swiper = new Swiper('.swiper-container', {
@@ -114,32 +112,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     filterButtons.forEach(button => {
         button.addEventListener("click", function() {
-            // Menghapus kelas aktif dari semua tombol
             filterButtons.forEach(btn => btn.classList.remove("active"));
-            // Menambahkan kelas aktif pada tombol yang dipilih
             this.classList.add("active");
 
             const filterValue = this.getAttribute("data-filter");
             cards.forEach(card => {
-                // Menampilkan semua kartu jika filter adalah 'all'
-                if (filterValue === "all" || card.getAttribute("data-category") === filterValue) {
-                    card.style.display = "block"; // Tampilkan kartu
-                } else {
-                    card.style.display = "none"; // Sembunyikan kartu
-                }
+                card.style.display = (filterValue === "all" || card.getAttribute("data-category") === filterValue) ? "block" : "none";
             });
         });
     });
 });
 
-
-
-
-
-
-
-animateContent([".home .content h5, .home .content h1, .home .content p, .home .content .search"]);
-
-swipeAnimation(".destinations", [".destinations .heading", ".destinations .content"])
-
-galleryAnimation(".destinations .gallery", [".destinations .gallery .box1",".destinations .gallery .box2",".destinations .gallery .box3",".destinations .gallery .box4",".destinations .gallery .box5"])
+// Initial animations
+animateContent([".home .content h5", ".home .content h1", ".home .content p", ".home .content .search"]);
+swipeAnimation(".destinations", [".destinations .heading", ".destinations .content"]);
+galleryAnimation(".destinations .gallery", [".destinations .gallery .box1", ".destinations .gallery .box2", ".destinations .gallery .box3", ".destinations .gallery .box4", ".destinations .gallery .box5"]);

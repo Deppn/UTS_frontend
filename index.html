@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AsiaTour.</title>
+    <title>AsiaTour</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-    <!-- home section mulai disini  -->
+    <!-- Home Section -->
     <section id="home" class="home">
         <div class="home-box">
             <nav>
@@ -17,7 +17,7 @@
                     <div class="bar">
                         <i class="fa fa-bars"></i>
                     </div>
-                    <h3>AsiaTour.</h3>
+                    <h3>AsiaTour</h3>
                 </div>
                 
                 <div class="menu">
@@ -26,160 +26,137 @@
                     </div>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#destinations">destinations</a></li>
-                        <li><a href="#tips">Remainder</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#tips">Travel Reminder</a></li>
                     </ul>
                 </div>
             </nav>
 
             <div class="content">
                 <h1>AsiaTour</h1>
-                <p>Find impressive vacation spots throughout Asia and make an unforgettable vacation trip</p>
-
+                <p>Find impressive vacation spots throughout Asia and make an unforgettable trip.</p>
                 <div class="search">
                     <i class="fa fa-search"></i>
                     <input type="text" id="searchInput" placeholder="Search for a country..." />
                     <button onclick="searchCountry()">Search</button>
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- home section berakhir di sini -->
 
-
-    <!-- destinatons section mulai disini  -->
+    <!-- Destinations Section -->
     <section id="destinations" class="destinations">
-        <h4 class="label">destinations</h4>
+        <h4 class="label">Destinations</h4>
         <div class="container">
             <div class="container-box">
-                <h2 class="heading">city and nature </h2>
+                <h2 class="heading">City and Nature</h2>
                 <div class="content">
-                    <p>Enjoy a perfect blend of natural beauty and urban dynamics. Explore the city with a rich cultural and modern architecture, then find peace in the surrounding nature. Experiences that combine urban hustle and bustle with the peace of openness, giving a balance between adventure and relaxation.</p>
-                    <a href="./exploremore/index.html">explore more <i class="fa fa-arrow-right"></i></a>
+                    <p>Enjoy a perfect blend of natural beauty and urban dynamics. Explore the city with rich cultural and modern architecture, then find peace in the surrounding nature.</p>
+                    <a href="./exploremore/index.html">Explore More <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="gallery">
                 <div class="box box1">
-                    <a href="./negara/indonesia/index.html"><img src="./images/home-background.jpeg" alt=""></a>
+                    <a href="./negara/indonesia/index.html"><img src="./images/home-background.jpeg" alt="Indonesia"></a>
                     <div class="text">
-                        <a href="#"><h2>Indonesia</h2></a>
+                        <a href="./negara/indonesia/index.html"><h2>Indonesia</h2></a>
                     </div>
                 </div>
                 <div class="box box2">
-                    <a href="./negara/singapura/index.html"><img src="./images/singapore.jpg" alt=""></a>
+                    <a href="./negara/singapura/index.html"><img src="./images/singapore.jpg" alt="Singapore"></a>
                     <div class="text">
-                        <a href="#"><h2>Singapore</h2></a>  
+                        <a href="./negara/singapura/index.html"><h2>Singapore</h2></a>  
                     </div>
                 </div>
                 <div class="box box3">
-                    <a href="./negara/Thailand/index.html"><img src="./images/thailand.jpg" alt=""> </a>
+                    <a href="./negara/thailand/index.html"><img src="./images/thailand.jpg" alt="Thailand"></a>
                     <div class="text">
-                        <a href=""><h2>Thailand</h2></a>
+                        <a href="./negara/thailand/index.html"><h2>Thailand</h2></a>
                     </div>
                 </div>
                 <div class="box box4">
-                    <a href="./negara/malaysia/index.html"><img src="./images/malaysia.jpg" alt=""></a>
+                    <a href="./negara/malaysia/index.html"><img src="./images/malaysia.jpg" alt="Malaysia"></a>
                     <div class="text">
-                        <a href=""><h2>Malaysia</h2></a>
+                        <a href="./negara/malaysia/index.html"><h2>Malaysia</h2></a>
                     </div>
                 </div>
                 <div class="box box5">
-                    <a href="./negara/jepang/index.html"><img src="./images/jepang.jpg" alt=""></a>
+                    <a href="./negara/jepang/index.html"><img src="./images/jepang.jpg" alt="Japan"></a>
                     <div class="text">
-                        <a href=""><h2>Japan</h2></a>
+                        <a href="./negara/jepang/index.html"><h2>Japan</h2></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- destinatons section berkahir disini -->
-     
-    <!--traveltips section start here-->
-        <section id="tips" class="tips">
-            <h4 class="label">Travelremainder</h4>
-            <div class="container">
-                <div class="container-box">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./images/peta.jpg" alt="Tip 1 Image" />
-                                <p>Tip 1: Selalu bawa peta lokal.</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/first aid kit.jpg" alt="Tip 2 Image" />
-                                <p>Tip 2: membawa alat kesehatan.</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/cuaca.jpg" alt="Tip 3 Image" />
-                                <p>Tip 3: Cek cuaca sebelum berangkat.</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/peta.jpg" alt="Tip 1 Image" />
-                                <p>Tip 1: Selalu bawa peta lokal.</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/first aid kit.jpg" alt="Tip 2 Image" />
-                                <p>Tip 2: membawa alat kesehatan</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/cuaca.jpg" alt="Tip 3 Image" />
-                                <p>Tip 3: Cek cuaca sebelum berangkat.</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/cuaca.jpg" alt="Tip 3 Image" />
-                                <p>Tip 3: Cek cuaca sebelum berangkat.</p>
-                            </div>
-                        </div>
 
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+    <!-- Travel Tips Section -->
+    <section id="tips" class="tips">
+        <h4 class="label">Travel Reminder</h4>
+        <div class="container">
+            <div class="container-box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/peta.jpg" alt="Tip 1 Image" />
+                            <p>Tip 1: Always carry a local map.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/first aid kit.jpg" alt="Tip 2 Image" />
+                            <p>Tip 2: Bring a first aid kit.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/cuaca.jpg" alt="Tip 3 Image" />
+                            <p>Tip 3: Check the weather before you go.</p>
+                        </div>
                     </div>
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-section left">
-                <h3>Kontak</h3>
-                <p>Email: jalssonn@gmail.com</p>
-                <p>Tlp : 082151808386</p>
-                <p>Alamat : Season City</p>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section left">
+                    <h3>Contact</h3>
+                    <p>Email: jalssonn@gmail.com</p>
+                    <p>Phone: 082151808386</p>
+                    <p>Address: Season City</p>
+                </div>
+                
+                <div class="footer-section center">
+                    <h3>Contact</h3>
+                    <p>Email: devenyuu13@gmail.com</p>
+                    <p>Phone: 085892811241</p>
+                    <p>Address: CBD Kuningan</p>
+                </div>
+                
+                <div class="footer-section right">
+                    <h3>Contact</h3>
+                    <p>Email: ghaziaalgifari@gmail.com</p>
+                    <p>Phone: 0881010065492</p>
+                    <p>Address: Jalan Teluk Gong Raya</p>
+                </div>
             </div>
-            
-            <div class="footer-section center">
-                <h3>Kontak</h3>
-                <p>Email: devenyuu13@gmail.com</p>
-                <p>Tlp: 085892811241</p>
-                <p>Alamat: CBD Kuningan</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 AsiaTour. All rights reserved.</p>
             </div>
-            
-            <div class="footer-section right">
-                <h3>Kontak</h3>
-                <p>Email: ghaziaalgifari@gmail.com</p>
-                <p>Telepon:0881010065492</p>
-                <p>Alamat: jln teluk gong raya</p>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 AsiaTour. All rights reserved.</p>
-        </div>
-        <div class="footer-section social">
-            <h3>Ikuti Kami</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

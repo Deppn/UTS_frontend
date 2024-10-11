@@ -512,40 +512,33 @@ footer .footer-container .footer-info a:hover {
     }
 }
 
+/* Tips Section */
+.tips {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Swiper Styles */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
 .swiper-slide {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .swiper-slide img {
-    margin-top: 2rem; /* Mengurangi jarak atas */
-    width: 80%; /* Mengurangi lebar gambar */
-    height: auto; /* Menjaga rasio aspek */
+    width: 50%;
+    height: auto;
     border-radius: 10px;
 }
 
-.swiper-slide p {
-    margin-top: 5px; /* Mengurangi jarak atas */
-    font-size: 0.9rem; /* Mengurangi ukuran font */
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px 8px; /* Mengurangi padding */
-    border-radius: 5px;
-}
-
-.swiper-container {
-    max-width: 600px; /* Mengatur lebar maksimum */
-    margin: 0 auto; /* Memusatkan swiper */
-}
-
-@media (max-width: 767px) {
-    .swiper-slide img {
-        width: 90%; /* Lebar lebih besar pada layar kecil */
-    }
-
-    .swiper-slide p {
-        font-size: 0.8rem; /* Ukuran font lebih kecil pada layar kecil */
-    }
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000;
 }
